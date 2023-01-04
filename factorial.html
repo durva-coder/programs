@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+
+    <script> 
+
+        function factorial(){
+            let num = document.getElementById("num").value;
+            
+            document.getElementById("ans").innerHTML = calculation(num);
+        }
+
+        function calculation(num){
+            
+            if(num==0){
+                return 1;
+            }
+            else if(num==1){
+                return 1;
+            }
+            else{
+                return calculation(num - 1) * num;
+            }
+        }
+       
+    </script>
+
+</head>
+<body>
+    <form action="#" method="get" onsubmit="return factorial()">
+        <input type="number" max="100" min="0" id="num">
+        <input type="submit" value="Print">
+        <p id="ans"></p>
+    </form>   
+</body>
+</html>
